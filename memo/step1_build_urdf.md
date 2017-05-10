@@ -1,8 +1,8 @@
 # Step 1: Building a Visual Robot Model with URDF from Scratch
 
 ## Confirm installed
-* joint_state_publisher
-* https://github.com/ros/urdf_tutorial.git
+* joint_state_publisher package
+* urdf_tutorial package
 
 ## Create Package
 ```
