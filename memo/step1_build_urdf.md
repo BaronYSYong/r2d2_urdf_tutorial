@@ -49,7 +49,6 @@ $ roslaunch urdf_tutorial display.launch model:='$(find basic_urdf_tutorial)/urd
 ```
 Note: the single quotes around the argument value.
 
-Result:
 ![](image/01-first_urdf.png) 
 
 Note:
