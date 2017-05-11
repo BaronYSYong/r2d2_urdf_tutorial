@@ -57,7 +57,7 @@ Note:
 * The fixed frame is transform frame where the center of the grid is located. Here, it’s a frame defined by our one link, base_link.
 * The visual element (the cylinder) has its origin at the center of its geometry as a default. Hence, half the cylinder is below the grid. 
 
-## 2. Multiple Shapes
+## 2. Multiple Shapes (fixed joints)
 Now let’s look at how to add multiple shapes/links. If we just add more link elements to the urdf, the parser won’t know where to put them. So, we have to add joints. Joint elements can refer to both flexible and inflexible joints. We’ll start with inflexible, or fixed joints. Create a file called "02-multipleshapes.urdf" inside urdf directory and fill it the codes with below
 ```
 <?xml version="1.0"?>
