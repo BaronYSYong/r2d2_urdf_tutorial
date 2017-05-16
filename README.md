@@ -7,6 +7,7 @@
 ## Reference
 * http://wiki.ros.org/urdf_tutorial
 * https://github.com/ros/urdf_tutorial.git
+* http://gazebosim.org/tutorials/?tut=ros_urdf
 
 ## Installation of ROS Kinetic in Ubuntu 16.04
 http://wiki.ros.org/kinetic/Installation/Ubuntu
