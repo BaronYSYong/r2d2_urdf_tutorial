@@ -1,10 +1,14 @@
 # README #
 
+## Environment
+* Ubuntu 16.04 (Xenial)
+* ROS Kinetic
+
 ## Reference
 * http://wiki.ros.org/urdf_tutorial
 * https://github.com/ros/urdf_tutorial.git
 
-## Installation of ROS in Ubuntu 16.04
+## Installation of ROS Kinetic in Ubuntu 16.04
 http://wiki.ros.org/kinetic/Installation/Ubuntu
 ```
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
