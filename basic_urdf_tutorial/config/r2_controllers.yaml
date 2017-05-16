@@ -1,0 +1,14 @@
+r2d2_joint_state_controller:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+
+r2d2_head_controller:
+  type: "position_controllers/JointPositionController"
+  joint: head_swivel
+
+r2d2_gripper_controller:
+  type: "position_controllers/JointGroupPositionController"
+  joints:
+    - gripper_extension
+    - left_gripper_joint
+    - right_gripper_joint
