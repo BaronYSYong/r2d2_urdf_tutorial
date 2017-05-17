@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>basic_urdf_tutorial</name>
+  <name>r2d2_urdf_tutorial</name>
   <version>0.0.0</version>
-  <description>The basic_urdf_tutorial package</description>
+  <description>The r2d2_urdf_tutorial package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->

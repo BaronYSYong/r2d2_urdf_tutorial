@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(basic_urdf_tutorial)
+project(r2d2_urdf_tutorial)
 
 ## Add support for C++11, supported in ROS Kinetic and newer
 # add_definitions(-std=c++11)
