@@ -23,13 +23,13 @@ $ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 $ sudo apt-get install python-rosinstall
 ```
 ## Build
-
+```
 $ cd /path/to/catkin_ws/src
 $ git clone https://github.com/BaronYSYong/r2d2_urdf_tutorial.git
 $ cd ..
 $ catkin_make
 $ source devel/setup.bash
-
+```
 
 ## Command list
 * $ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/01-myfirst.urdf'
