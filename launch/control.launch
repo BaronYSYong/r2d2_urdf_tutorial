@@ -1,9 +1,9 @@
 <launch>
 
-  <arg name="model" default="$(find basic_urdf_tutorial)/urdf/r2d2.xacro"/>
-  <arg name="rvizconfig" default="$(find basic_urdf_tutorial)/urdf.rviz" />
+  <arg name="model" default="$(find r2d2_urdf_tutorial)/urdf/r2d2.xacro"/>
+  <arg name="rvizconfig" default="$(find r2d2_urdf_tutorial)/urdf.rviz" />
 
-  <include file="$(find basic_urdf_tutorial)/launch/gazebo.launch">
+  <include file="$(find r2d2_urdf_tutorial)/launch/gazebo.launch">
     <arg name="model" value="$(arg model)" />
   </include>
 
@@ -11,7 +11,7 @@
 
   <!-- This param file is where any environment-agnostic (live or simulation)
   configuration should be loaded, including controllers -->
-  <rosparam command="load" file="$(find basic_urdf_tutorial)/config/control.yaml" />
+  <rosparam command="load" file="$(find r2d2_urdf_tutorial)/config/control.yaml" />
 
   <!-- This node loads the two controllers into a controller manager (real or simulated). The
   controllers are defined in config/control.yaml -->

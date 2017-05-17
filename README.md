@@ -22,3 +22,28 @@ $ rosdep update
 $ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 $ sudo apt-get install python-rosinstall
 ```
+
+## Command list
+```
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/01-myfirst.urdf'
+
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/02-multipleshapes.urdf'
+
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/03-origins.urdf'
+
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/04-materials.urdf'
+
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/05-visual.urdf'
+
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/06-flexible.urdf'
+
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/07-physics.urdf'
+
+$ roslaunch r2d2_urdf_tutorial xacrodisplay.launch model:='$(find r2d2_urdf_tutorial)/urdf/08-macroed.urdf.xacro'
+
+$ roslaunch r2d2_urdf_tutorial gazebo.launch model:='$(find r2d2_urdf_tutorial)/urdf/08-macroed.urdf.xacro'
+
+$ roslaunch r2d2_urdf_tutorial gazebo.launch model:='$(find r2d2_urdf_tutorial)/urdf/09-roscontrol.urdf.xacro'
+
+$ roslaunch r2d2_urdf_tutorial control.launch
+```

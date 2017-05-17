@@ -6,11 +6,11 @@
 
 ## Create Package
 ```
-$ cd ~/catkin_ws/src/ros-urdf-tutorial
-$ catkin_create_pkg basic_urdf_tutorial roscpp rospy
+$ cd ~/catkin_ws/src/
+$ catkin_create_pkg r2d2_urdf_tutorial roscpp rospy
 $ cd ~/catkin_ws
 $ catkin_make
-$ cd ~/catkin_ws/src/ros-urdf-tutorial/basic_urdf_tutorial
+$ cd ~/catkin_ws/src/r2d2_urdf_tutorial
 $ mkdir urdf
 $ touch 01-myfirst.urdf
 ```
@@ -33,7 +33,7 @@ Explanation: this is a robot with the name myfirst, that contains only one link 
 
 To examine the model, launch the display.launch file: 
 ```
-$ roslaunch urdf_tutorial display.launch model:=/home/baron/catkin_ws/src/ros-urdf-tutorial/basic_urdf_tutorial/urdf/01-myfirst.urdf
+$ roslaunch r2d2_urdf_tutorial display.launch model:=/home/baron/catkin_ws/src/r2d2_urdf_tutorial/urdf/01-myfirst.urdf
 ```
 This does three things.
 
@@ -45,7 +45,7 @@ Note that the roslaunch line above assumes that you are executing it from the ur
 
 A slightly modified argument allows this to work regardless of the current working directory:
 ```
-$ roslaunch urdf_tutorial display.launch model:='$(find basic_urdf_tutorial)/urdf/01-myfirst.urdf'
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/01-myfirst.urdf'
 ```
 Note: the single quotes around the argument value.
 
@@ -87,7 +87,7 @@ Now let’s look at how to add multiple shapes/links. If we just add more link e
 Note how we defined a 0.6m x 0.1m x 0.2m box
 The joint is defined in terms of a parent and a child. URDF is ultimately a tree structure with one root link. This means that the leg’s position is dependent on the base_link’s position. 
 ```
-$ roslaunch urdf_tutorial display.launch model:='$(find basic_urdf_tutorial)/urdf/02-multipleshapes.urdf'
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/02-multipleshapes.urdf'
 ```
 ![](image/02-multipleshapes.png) 
 
@@ -126,7 +126,7 @@ So R2D2’s leg attaches to the top half of his torso, on the side. So that’s 
 * Let’s start by examining the joint’s origin. It is defined in terms of the parent’s reference frame. So we are -0.22 meters in the y direction (to our left, but to the right relative to the axes) and 0.25 meters in the z direction (up). This means that the origin for the child link will be up and to the right, regardless of the child link’s visual origin tag. Since we didn’t specify a rpy (roll pitch yaw) attribute, the child frame will be default have the same orientation as the parent frame.
 * Now, looking at the leg’s visual origin, it has both a xyz and rpy offset. This defines where the center of the visual element should be, relative to its origin. Since we want the leg to attach at the top, we offset the origin down by setting the z offset to be -0.3 meters. And since we want the long part of the leg to be parallel to the z axis, we rotate the visual part PI/2 around the Y axis. 
 ```
-$ roslaunch urdf_tutorial display.launch model:='$(find basic_urdf_tutorial)/urdf/03-origins.urdf'
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/03-origins.urdf'
 ```
 ![](image/03-origins.png) 
 
@@ -196,7 +196,7 @@ Time to change color. Create a file called "04-materials.urdf" inside urdf direc
 * You could also define the material tag from within the visual element, and even reference it in other links. No one will even complain if you redefine it though.
 * You can also use a texture to specify an image file to be used for coloring the object 
 ```
-$ roslaunch urdf_tutorial display.launch model:='$(find basic_urdf_tutorial)/urdf/04-materials.urdf'
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/04-materials.urdf'
 ```
 ![](image/04-materials.png) 
 
@@ -213,7 +213,7 @@ $ cp -r rviz ~/catkin_ws/src/ros-urdf-tutorial/basic_urdf_tutorial
 ```
 roslaunch it
 ```
-$ roslaunch urdf_tutorial display.launch model:='$(find basic_urdf_tutorial)/urdf/05-visual.urdf'
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/05-visual.urdf'
 ```
 ![](image/05-visual.png) 
 How to add the sphere should be fairly self explanatory 

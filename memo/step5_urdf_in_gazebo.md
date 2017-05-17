@@ -4,7 +4,7 @@
 
 Spawn the model created into Gazebo using gazebo.launch
 ```
-$ roslaunch basic_urdf_tutorial gazebo.launch model:='$(find basic_urdf_tutorial)/urdf/08-macroed.urdf.xacro'
+$ roslaunch r2d2_urdf_tutorial gazebo.launch model:='$(find r2d2_urdf_tutorial)/urdf/08-macroed.urdf.xacro'
 ```
 This launch file
 
@@ -48,6 +48,10 @@ Add the following code to your URDF, right before the closing </robot> tag:
       <robotNamespace>/</robotNamespace>
     </plugin>
   </gazebo>
+```
+Run the simulator
+```
+$ roslaunch r2d2_urdf_tutorial gazebo.launch model:='$(find r2d2_urdf_tutorial)/urdf/09-roscontrol.urdf.xacro'
 ```
 
 ## 4. Spawning Controllers
@@ -191,5 +195,6 @@ The DiffDriveController subscribes to a standard Twist cmd_vel message and moves
 ## 7. Putting it All Together
 The following terminal command should run all of the above modifications, allowing you to drive the R2D2 robot around using the RobotSteering panel, while also observing its actual behavior (in Gazebo) and it's visualized behavior (in RViz):
 ```
-$ roslaunch urdf_tutorial control.launchroslaunch urdf_tutorial control.launch
+$ roslaunch r2d2_urdf_tutorial control.launch
 ```
+![](image/08-control.png) 

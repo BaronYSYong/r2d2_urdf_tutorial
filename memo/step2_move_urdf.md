@@ -3,7 +3,7 @@
 Create a file called “06-flexible.urdf” inside urdf directory. 
 To visualize and control this model, run the same command as the last tutorial: 
 ```
-$ roslaunch urdf_tutorial display.launch model:='$(find basic_urdf_tutorial)/urdf/06-flexible.urdf'
+$ roslaunch r2d2_urdf_tutorial display.launch model:='$(find r2d2_urdf_tutorial)/urdf/06-flexible.urdf'
 ```
 However now this will also pop up a GUI that allows you to control the values of all the non-fixed joints. 
 ![](image/06-flexible.png) 
